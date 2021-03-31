@@ -33,7 +33,7 @@ export const actions = {
     commit('setCar',car);
   },
   async updateCar({ commit }, params){
-    const car = await this.$axios.$post('http://localhost:8089/api/cars/update/'+params.id,this.state.car)
+    const car = await this.$axios.$post('http://localhost:8089/api/cars/update/'+params.id, params)
     commit('setCar',car);
   },
   updatePerson: ({ commit }, payload) => commit('updatePerson', payload)
